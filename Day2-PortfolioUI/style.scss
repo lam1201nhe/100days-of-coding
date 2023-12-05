@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+$main-color: #ffb742;
+$white-color: #fff;
+
+$small-font: 12px;
+$normal-font: 16px;
+$big-font: 44px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #212529;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+
+  /* Căn Lề trái phải */
+  padding: 0 50px;
+}
+
+.navbar h2 {
+  color: #ffb742;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a {
+  color: #ffb742;
+}
+
+.navbar ul li:last-child a {
+  margin: 0;
+}
+
+.hire-btn {
+  background: #ffb742;
+  padding: 6px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: #fb8c00;
+}
+
+/* MAIN CONTENT */
+.main {
+  /* Fix cứng Height -> theo chiều dài màn hình X */
+  height: 640px;
+  /* height: 70vh */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // H4
+  h4 {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 600;
+
+    span {
+      color: $main-color;
+      text-decoration: underline;
+    }
+  }
+
+  .title {
+    font-size: $big-font;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 8px;
+  }
+
+  .subtitle {
+    font-size: $normal-font;
+    color: #ccc;
+    margin-top: 20px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+  }
+}
+
+.guarantee {
+  margin-top: 50px;
+  display: flex;
+  padding: 0 50px;
+  gap: 24px;
+  // Ví dụ Width = 200px; nếu wrap => 4 item width=50px.. 
+  // Còn nếu nowrap => 10 item thì vẫn cùng 1 hàng
+  flex-wrap: nowrap;
+
+  .item {
+    background: #292b2e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 30px;
+    // transparent = none? Để none ảnh hưởng đén hover
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      background: $white-color;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+
+      i { 
+        font-size: 30px;
+      }
+    }
+
+    .infor{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        color: $main-color;
+        font-size: 28px;        
+      }
+
+      p {
+        color: $white-color;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+
+    > i {
+      font-size: 30px;
+      color: $white-color;
+      transition: color 0.3s ease
+    }
+  }
+
+  .item:hover{
+    border-color: $main-color;
+
+    .icon {
+      background-color: $main-color;
+    }
+  }
+
+  
+}
