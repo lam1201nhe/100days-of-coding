@@ -183,7 +183,10 @@ body {
     .icon {
       background-color: $main-color;
     }
-  }
 
-  
+    > i {
+      color: $main-color;
+    }
+  }
 }
+

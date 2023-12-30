@@ -157,4 +157,12 @@ body {
 }
 .guarantee .item:hover .icon {
   background-color: #ffb742;
-}/*# sourceMappingURL=style.css.map */
+}
+.guarantee .item:hover > i {
+  color: #ffb742;
+}
+.about > img {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=style.css.map */
